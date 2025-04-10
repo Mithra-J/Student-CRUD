@@ -25,6 +25,32 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <title>Edit Student</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #E6E6FA; /* Pale Violet Background */
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .btn-primary {
+            background-color: #4CAF50; /* Green color for Update button */
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        .btn-secondary {
+            background-color: #6c757d; /* Gray color for Back button */
+            border: none;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268; /* Darker gray on hover */
+        }
+    </style>
 </head>
 <body>
 

@@ -20,6 +20,7 @@ include 'db_connect.php';
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
         .container {
             background: #fff;
@@ -28,6 +29,20 @@ include 'db_connect.php';
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 900px;
+            margin-bottom: 80px; /* To avoid footer overlap */
+        }
+        .mithra-footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            color: #555;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            background-color: #f8f9fa;
+        }
+        .heart {
+            color: red;
         }
         h2 {
             color: #9370DB; /* Medium purple tone */
@@ -72,6 +87,9 @@ include 'db_connect.php';
         <hr>
 
         <h2 class="text-center mb-4">Student List</h2>
+            <div class="text-end mb-3">
+                <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete ALL students?')" href="delete_all.php">Delete All Students</a>
+            </div>
 
         <table class="table table-striped table-hover">
             <thead>
@@ -97,7 +115,7 @@ include 'db_connect.php';
                         echo "<td>".$row['phone']."</td>";
                         echo "<td>
                             <a class='btn btn-success btn-sm' href='edit.php?id=".$row['id']."'>Edit</a>
-                            <a class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure?\")' href='delete.php?id=".$row['id']."'>Delete</a>
+                            <a class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure?To delete this student record?\")' href='delete.php?id=".$row['id']."'>Delete</a>
                         </td>";
                         echo "</tr>";
                     }
@@ -110,7 +128,11 @@ include 'db_connect.php';
 
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+    <div class="mithra-footer">
+        Done by <strong>MITHRA J</strong> 
+        <span class="heart">❤️</span>
+    </div>
+
 </body>
 </html>

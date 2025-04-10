@@ -1,3 +1,4 @@
+
 <?php
 $servername = "localhost";   // or 127.0.0.1
 $username = "root";           // default XAMPP phpMyAdmin username
